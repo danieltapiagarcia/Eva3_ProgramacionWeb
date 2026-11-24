@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+
+    <form method="POST">
+
+        <h2>Formulario de Nombres</h2>
+
+        <label>Nombre 1:</label>
+        <input type="text" name="nombre1" required>
+
+        <br><br>
+
+        <label>Nombre 2:</label>
+        <input type="text" name="nombre2" required>
+
+        <br><br>
+
+        <label>Nombre 3:</label>
+        <input type="text" name="nombre3" required>
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    {% if nombre_largo is defined %}
+
+        <h3>Resultado:</h3>
+
+        <p>Nombre más largo: {{ nombre_largo }}</p>
+
+        <p>Cantidad de caracteres: {{ cantidad_caracteres }}</p>
+
+    {% endif %}
+
+</body>
+</html>
